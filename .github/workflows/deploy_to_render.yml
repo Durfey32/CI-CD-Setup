@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Install dependencies
         run: npm install
 
@@ -23,7 +24,12 @@ jobs:
         run: npm start &
 
       - name: Wait for server to be ready
-        run: wait-on http://localhost:3001
+        run: wait-on http://localhost:3001 --timeout 30000
+
+      - name: Check server logs
+        run: |
+          sleep 5
+          curl -I http://localhost:3001
 
       - name: Run Cypress tests
         run: npx cypress run --browser electron

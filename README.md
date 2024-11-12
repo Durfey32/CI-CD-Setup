@@ -36,6 +36,7 @@ This project is licensed under the MIT License.
 ==================================================================
 ![alt text](<client/src/assets/Screenshot 2024-11-11 204313.png>)
 ---
+### This is the deployed page [here](https://ci-cd-setup.onrender.com)
 
 ## Questions?
 Feel free to reach out!

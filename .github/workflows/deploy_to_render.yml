@@ -14,16 +14,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      -name: Install Cypress Globally
+      - name: Install Cypress Globally
         run: npm install -g cypress
-        
-      - name: Test
+
+      - name: Run Cypress tests
         run: |
           npm install
-          npm run test
+          npm run test-component
 
       - name: Deploy
-
         if: github.ref == 'refs/heads/main'
         env:
           deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}

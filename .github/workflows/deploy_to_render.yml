@@ -14,25 +14,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Install wait-on
-        run: npm install -g wait-on
-
-      - name: Start server
-        run: npm start &
-
-      - name: Wait for server to be ready
-        run: wait-on http://localhost:3001 --timeout 60000
-
-      - name: Check server logs
-        run: |
-          sleep 5
-          curl -I http://localhost:3001
+      - name: Install Cypress Globally
+        run: npm install -g cypress
 
       - name: Run Cypress tests
-        run: npx cypress run --browser electron
+        run: |
+          npm install
+          npm run test-component
 
       - name: Deploy
         if: github.ref == 'refs/heads/main'

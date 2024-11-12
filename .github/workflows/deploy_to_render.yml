@@ -24,7 +24,7 @@ jobs:
         run: npm start &
 
       - name: Wait for server to be ready
-        run: wait-on http://localhost:3001 --timeout 30000
+        run: wait-on http://localhost:3001 --timeout 60000
 
       - name: Check server logs
         run: |

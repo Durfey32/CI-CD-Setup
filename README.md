@@ -31,6 +31,7 @@ This project is licensed under the MIT License.
 ---
 
 ## Tests
+[![Checking Tests](https://github.com/Durfey32/CI-CD-Setup/actions/workflows/checking_tests.yml/badge.svg)](https://github.com/Durfey32/CI-CD-Setup/actions/workflows/checking_tests.yml)
 ### You can view the Cypress test code [here](https://gist.github.com/Durfey32/9da9b30025347732097a61309ebac0ef).
 ![alt text](<client/src/assets/Screenshot 2024-11-11 204229.png>)
 ==================================================================
